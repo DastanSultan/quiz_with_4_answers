@@ -40,7 +40,20 @@ class CategoryWidget extends StatefulWidget {
   State<CategoryWidget> createState() => _CategoryWidgetState();
 }
 
+int index = 0;
+
 class _CategoryWidgetState extends State<CategoryWidget> {
+  category() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Math(
+          num: index,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,14 +66,8 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                 InkWell(
                   onTap: () {
                     setState(() {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Math(
-                            num: index,
-                          ),
-                        ),
-                      );
+                      print("$index");
+                      category();
                     });
                   },
                   child: Container(
@@ -106,7 +113,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                               height: 10,
                             ),
                             Text(
-                              "${wquestions.length} question",
+                              "${wquestions.length} суроо",
                               style: colorsUnterTexts,
                             ),
                           ],

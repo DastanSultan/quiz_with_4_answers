@@ -41,4 +41,13 @@ List<Question> wquestions = [
       Option(ansewers: "50", correct: false),
     ],
   ),
+  Question(
+    texts: "Адольф Гитлер кайсыл олкодо торолгон?",
+    options: [
+      Option(ansewers: "Италия", correct: false),
+      Option(ansewers: "Германия", correct: false),
+      Option(ansewers: "Австрия", correct: true),
+      Option(ansewers: "Франция", correct: false),
+    ],
+  ),
 ];
