@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:quiz_with_4_answers/questions/questions.dart';
 import 'package:quiz_with_4_answers/subjects/math.dart';
 
-List<String> categorys_kg = ["Математика", "Англис тили", "Немец тили"];
+List<String> categorys_kg = [
+  "Математика",
+  "Англис тили",
+  "Немец тили",
+  "Кыргыз тили",
+  "Физика"
+];
 List<String> alphabets = [
   "A",
   "Б",
@@ -41,14 +47,15 @@ class CategoryWidget extends StatefulWidget {
 }
 
 int index = 0;
+int man = 0;
 
 class _CategoryWidgetState extends State<CategoryWidget> {
-  category() {
+  category(int man) {
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => Math(
-          num: index,
+          num: man,
         ),
       ),
     );
@@ -66,8 +73,9 @@ class _CategoryWidgetState extends State<CategoryWidget> {
                 InkWell(
                   onTap: () {
                     setState(() {
-                      print("$index");
-                      category();
+                      man = index;
+                      print("man $man");
+                      category(man);
                     });
                   },
                   child: Container(
