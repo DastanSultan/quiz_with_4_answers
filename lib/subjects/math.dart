@@ -1,5 +1,7 @@
 // ignore_for_file: must_be_immutable
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:quiz_with_4_answers/item/category.dart';
 import 'package:quiz_with_4_answers/item/home.dart';
@@ -114,7 +116,7 @@ class _MathState extends State<Math> {
           ),
           Text(
             num == 0
-                ? "Бардык суроолордун саны: ${wquestions.length}"
+                ? "Бардык суроолордун саны: ${wquestions.length} "
                 : (num == 1
                     ? "Бардык суроолордун саны: ${wquestions1.length}"
                     : (num == 2
@@ -130,7 +132,7 @@ class _MathState extends State<Math> {
             height: 10,
           ),
           Text(
-            "Туура жооптордун саны: $correctAntwort",
+            "Туура жооптордун саны: $correctAntwort ",
             style: colorsBlack,
           ),
           SizedBox(
@@ -230,7 +232,7 @@ class _MathState extends State<Math> {
                                 style: colorsBlack,
                               ),
                               Text(
-                                "Откоруу",
+                                "өткөрүү",
                                 style: colorsWhite,
                               ),
                             ],
@@ -248,19 +250,24 @@ class _MathState extends State<Math> {
                       Container(
                           padding: EdgeInsets.only(top: 10),
                           alignment: Alignment.centerLeft,
-                          child: Text(
-                            num == 0
-                                ? "$index/${wquestions.length}"
-                                : (num == 1
-                                    ? "$index/${wquestions1.length}"
-                                    : (num == 2
-                                        ? "$index/${wquestions2.length}"
-                                        : (num == 3
-                                            ? "$index/${wquestions3.length}"
-                                            : (num == 4
-                                                ? "$index/${wquestions4.length}"
-                                                : "")))),
-                            style: colorsBlack,
+                          child: Row(
+                            children: [
+                              Text(
+                                num == 0
+                                    ? "$index/${wquestions.length}"
+                                    : (num == 1
+                                        ? "$index/${wquestions1.length}"
+                                        : (num == 2
+                                            ? "$index/${wquestions2.length}"
+                                            : (num == 3
+                                                ? "$index/${wquestions3.length}"
+                                                : (num == 4
+                                                    ? "$index/${wquestions4.length}"
+                                                    : "")))),
+                                style: colorsBlack,
+                              ),
+                              SizedBox(width: 300),
+                            ],
                           )),
                       sizedBox50(),
                       Container(

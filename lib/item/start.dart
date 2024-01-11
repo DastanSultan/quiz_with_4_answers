@@ -39,7 +39,8 @@ class startState extends State<start> {
                   width: MediaQuery.of(context).size.width * 0.7,
                   child: TextField(
                     controller: controller,
-                    decoration: InputDecoration(labelText: "Как ваше имя?"),
+                    decoration:
+                        InputDecoration(labelText: "Сиздин атыңыз ким?"),
                     onChanged: (value) {
                       setState(() {
                         nameUser = controller.text;
@@ -69,7 +70,7 @@ class startState extends State<start> {
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(6),
                     ),
-                    child: Text("Продолжить"),
+                    child: Text("Улантуу"),
                   ),
                 ),
               ],

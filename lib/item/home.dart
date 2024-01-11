@@ -56,7 +56,7 @@ class homeState extends State<home> {
                       Column(
                         children: [
                           Text(
-                            "👋🏻 Привет $nameUser,\nЯ рад тебя снова видеть!",
+                            "👋🏻 Салам $nameUser,\nКош келипсиз!",
                             style: colorsWhite,
                           ),
                         ],
